@@ -716,6 +716,11 @@ img {
   align-items: center;
 }
 
+.form-input-subscribe:focus {
+  outline: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .footer-subscribe-button {
   position: relative;
   padding: 10px 62px 20px 29px;
@@ -729,12 +734,14 @@ img {
   letter-spacing: 0.06em;
 
   background-color: var(--accent-cl);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-color: transparent;
   border-radius: 4px;
+
+  transition: box-shadow 250ms var(--timing-function);
 }
 
 .footer-subscribe-button:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
 
@@ -805,22 +812,16 @@ img {
 }
 
 .form-input {
-  overlay: none;
   padding: 11px 12px 11px 42px;
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border 250ms var(--timing-function);
 }
 
 .form-input:focus + .modal-field-icon {
   fill: var(--accent-cl);
-}
-
-.form-input:focus {
-  border-color: var(--accent-cl);
-}
-
-.form-input,
-.textarea-comment {
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
 }
 
 .modal-form-field label {
@@ -829,6 +830,16 @@ img {
 
 .textarea-comment {
   padding: 12px 16px;
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border 250ms var(--timing-function);
+}
+
+.form-input:focus,
+.textarea-comment:focus {
+  border: 1px solid var(--accent-cl);
 }
 
 .modal-form-field .textarea-comment::placeholder {
@@ -879,20 +890,74 @@ img {
   margin-right: 10px;
 }
 
-.modal-form-policy-field input[type='checkbox'] {
+.policy-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
 }
+
+/* .policy-checkbox::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: red;
+} */
+
+/* .modal-form-policy-field input[type='checkbox'] {
+} */
 
 .modal-form-field-comment .textarea-comment {
   resize: none;
 }
 
-.modal-close {
+.modal-form-submit-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 55px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: var(--dark-bg-text-cl);
+  border: transparent;
+  cursor: pointer;
+
+  background: var(--accent-cl);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  transition: box-shadow 250ms var(--timing-function);
+}
+
+.modal-form-submit-button:hover,
+.modal-form-submit-button:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.modal-close-button {
   position: absolute;
-  top: 9px;
+  top: 8px;
   right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--main-bg-cl);
   cursor: pointer;
 }
 
-.modal-close:hover {
+.modal-close-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  transition: fill 250ms var(--timing-function);
+}
+
+.modal-close-button:hover .modal-close-icon {
   fill: var(--accent-cl);
 }
