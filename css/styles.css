@@ -830,11 +830,6 @@ img {
 
 .textarea-comment {
   padding: 12px 16px;
-  outline: none;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-
-  transition: border 250ms var(--timing-function);
 }
 
 .form-input:focus,
@@ -881,7 +876,7 @@ img {
   line-height: 1.8;
 }
 
-.modal-form-policy-field {
+.modal-form-policy-label {
   display: flex;
   align-items: center;
 }
@@ -897,16 +892,25 @@ img {
   position: absolute;
 }
 
-/* .policy-checkbox::before {
+.checkbox-icon {
   content: '';
-  display: block;
-  width: 20px;
-  height: 20px;
-  background: red;
-} */
+  display: inline-block;
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
 
-/* .modal-form-policy-field input[type='checkbox'] {
-} */
+  border: 2px solid var(--title-cl);
+  border-radius: 4px;
+}
+
+.policy-checkbox:checked + .checkbox-icon {
+  /* background: var(--accent-cl); */
+  background-image: url(../images/icons/policy-checked-2.svg);
+  background-size: contain;
+  background-origin: border-box;
+  /* border-color: var(--accent-cl); */
+  border-color: transparent;
+}
 
 .modal-form-field-comment .textarea-comment {
   resize: none;
