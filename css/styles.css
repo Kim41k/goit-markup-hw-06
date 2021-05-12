@@ -716,6 +716,10 @@ img {
   align-items: center;
 }
 
+.form-input-subscribe {
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .form-input-subscribe:focus {
   outline: none;
   color: rgba(255, 255, 255, 0.6);
