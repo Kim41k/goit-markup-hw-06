@@ -824,10 +824,6 @@ img {
   fill: var(--accent-cl);
 }
 
-.modal-form-field label {
-  margin-bottom: 4px;
-}
-
 .textarea-comment {
   padding: 12px 16px;
 }
@@ -853,6 +849,7 @@ img {
 }
 
 .modal-form-label {
+  margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.2;
   letter-spacing: 0.01em;
@@ -904,11 +901,9 @@ img {
 }
 
 .policy-checkbox:checked + .checkbox-icon {
-  /* background: var(--accent-cl); */
   background-image: url(../images/icons/policy-checked-2.svg);
   background-size: contain;
   background-origin: border-box;
-  /* border-color: var(--accent-cl); */
   border-color: transparent;
 }
 
